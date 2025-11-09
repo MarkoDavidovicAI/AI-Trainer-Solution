@@ -16,6 +16,18 @@ window.onload = () => {
   loadFAQ();
 };
 
+// funkcija koja traži odgovor u faqData na osnovu korisnikovog pitanja
+function getAnswer(userInput) {
+  const question = userInput.toLowerCase();
+  const match = faqData.find(faq => faq.question.toLowerCase() === question);
+  if (match) {
+    return match.answer; // vraća pravi odgovor iz JSON-a
+  } else {
+    return "I'm sorry, I don't know the answer yet."; // fallback
+  }
+}
+
+
 const chatWindow = document.getElementById('chatWindow');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
@@ -67,4 +79,5 @@ sendBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     chatWindow.innerHTML = '';
 });
+
 
