@@ -1,33 +1,23 @@
-let faqData = []; // tu ćemo čuvati sva pitanja
+// ---------- FAQ LOAD ----------
+let faqData = []; // ovde čuvamo sva pitanja
 
-// funkcija koja učitava FAQ iz faq.json
+// učitavanje FAQ iz faq.json
 async function loadFAQ() {
-  try {
-    const response = await fetch('faq.json'); // uzima fajl iz repozitorijuma
-    faqData = await response.json();          // čuva podatke u varijablu
-  } catch (err) {
-    console.error('Failed to load FAQ', err);
-    faqData = [];
-  }
+    try {
+        const response = await fetch('faq.json');
+        faqData = await response.json();
+        populateCategories(); // popuni dropdown kategorije
+    } catch (err) {
+        console.error('Failed to load FAQ', err);
+        faqData = [];
+    }
 }
 
-// kada se stranica učita, poziva se loadFAQ()
 window.onload = () => {
-  loadFAQ();
+    loadFAQ();
 };
 
-// funkcija koja traži odgovor u faqData na osnovu korisnikovog pitanja
-function getAnswer(userInput) {
-  const question = userInput.toLowerCase();
-  const match = faqData.find(faq => faq.question.toLowerCase() === question);
-  if (match) {
-    return match.answer; // vraća pravi odgovor iz JSON-a
-  } else {
-    return "I'm sorry, I don't know the answer yet."; // fallback
-  }
-}
-
-
+// ---------- CHAT LOGIKA ----------
 const chatWindow = document.getElementById('chatWindow');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
@@ -35,21 +25,7 @@ const resetBtn = document.getElementById('resetBtn');
 const typingIndicator = document.getElementById('typingIndicator');
 const categorySelect = document.getElementById('categorySelect');
 
-const placeholderResponses = {
-    personal: {
-        "What is my DOB?": "Your DOB is stored securely. For demo purposes, let's say January 1, 1990.",
-        "Tell me about me": "You are a valued client. Placeholder AI is here to demonstrate training."
-    },
-    technical: {
-        "App not working": "Please try restarting the app. If the issue persists, contact support.",
-        "How to reset password?": "Go to Settings → Account → Reset Password."
-    },
-    other: {
-        "General question": "This is a placeholder response for other inquiries.",
-        "Help": "Our AI assistant is here to help with any type of question."
-    }
-};
-
+// funkcija za dodavanje poruke u chat
 function appendMessage(message, sender) {
     const div = document.createElement('div');
     div.textContent = message;
@@ -58,6 +34,39 @@ function appendMessage(message, sender) {
     chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
+// funkcija koja traži odgovor iz faqData
+function getAnswer(userInput) {
+    const question = userInput.toLowerCase();
+    // traži samo u odabranoj kategoriji ako je selektovana
+    const category = categorySelect.value;
+    let searchData = faqData;
+
+    if (category && category !== 'all') {
+        searchData = faqData.filter(faq => faq.category.toLowerCase() === category.toLowerCase());
+    }
+
+    const match = searchData.find(faq => faq.question.toLowerCase() === question);
+    if (match) {
+        return match.answer;
+    } else {
+        return "I'm sorry, I don't know the answer yet.";
+    }
+}
+
+// funkcija za popunjavanje dropdown sa kategorijama
+function populateCategories() {
+    if (!categorySelect) return;
+    const categories = [...new Set(faqData.map(f => f.category))];
+    categorySelect.innerHTML = '<option value="all">All</option>';
+    categories.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat;
+        option.textContent = cat;
+        categorySelect.appendChild(option);
+    });
+}
+
+// ---------- SEND MESSAGE ----------
 sendBtn.addEventListener('click', () => {
     const question = userInput.value.trim();
     if (!question) return;
@@ -68,16 +77,4 @@ sendBtn.addEventListener('click', () => {
     typingIndicator.classList.remove('hidden');
 
     setTimeout(() => {
-        const category = categorySelect.value;
-        const responses = placeholderResponses[category];
-        let answer = responses[question] || "This is a placeholder response. In a real scenario, AI would generate a precise answer.";
-        appendMessage(answer, 'ai');
-        typingIndicator.classList.add('hidden');
-    }, 1000);
-});
-
-resetBtn.addEventListener('click', () => {
-    chatWindow.innerHTML = '';
-});
-
-
+        const answer = getAnswer(questio
