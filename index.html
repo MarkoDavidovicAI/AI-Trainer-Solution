@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trainer Portfolio – AI Demo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Trainer Portfolio – AI Demo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">AI Trainer Portfolio</div>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#demo">Demo Chat</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>AI Trainer Portfolio – AI Demo</h1>
+    <nav>
+      <a href="#demo">AI Demo</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>AI Trainer Portfolio – AI Demo</h1>
-        <p>This project showcases my expertise in training AI to improve business efficiency across industries. The AI assistant reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
-        <button onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Try Chat</button>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p>This demo shows how I train AI chatbots to handle common support questions across categories (personal data, password, deposit, crypto, etc.).</p>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        <p>I help companies optimize their customer support and business processes by training AI to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
-    </section>
+  <section id="demo">
+    <h2>AI Demo</h2>
 
-    <!-- Demo Chat Section -->
-    <section id="demo">
-        <h2>Demo Chat</h2>
-        <div class="chat-container">
-            <div class="chat-window" id="chatWindow"></div>
-            <select id="categorySelect">
-                <option value="personal">Personal Info</option>
-                <option value="technical">Technical Support</option>
-                <option value="other">Other</option>
-            </select>
-            <input type="text" id="userInput" placeholder="Type your question here...">
-            <button id="sendBtn">Send</button>
-            <button id="resetBtn">Reset Chat</button>
-            <div id="typingIndicator" class="hidden">AI is typing...</div>
-        </div>
-    </section>
+    <!-- category quick filters -->
+    <div class="filters">
+      <button class="filter-btn" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="personal">Personal</button>
+      <button class="filter-btn" data-cat="password">Password</button>
+      <button class="filter-btn" data-cat="deposit">Deposit</button>
+      <button class="filter-btn" data-cat="crypto">Crypto</button>
+      <button class="filter-btn" data-cat="other">Other</button>
+    </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <p>Made by Marko Davidovic</p>
-    </footer>
+    <div class="chat-wrapper">
+      <select id="categorySelect" style="display:none"></select> <!-- kept for compatibility -->
+      <div id="chatWindow" class="chat-window"></div>
+      <div id="typingIndicator" class="hidden">Typing...</div>
 
-    <script src="script.js"></script>
+      <div class="input-row">
+        <input type="text" id="userInput" placeholder="Type your question here...">
+        <button id="sendBtn">Send</button>
+        <button id="resetBtn">Reset Chat</button>
+      </div>
+    </div>
+
+    <aside class="side">
+      <h3>Sample Questions (click to send)</h3>
+      <div id="sampleList"></div>
+    </aside>
+  </section>
+
+  <footer>
+    <p>Made by Marko Davidovic | <a href="https://github.com/MarkoDavidovicAI">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
