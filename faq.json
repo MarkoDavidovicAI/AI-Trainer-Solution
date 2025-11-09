@@ -3,15 +3,5 @@
     "question": "What is my date of birth?",
     "answer": "Your DOB is stored securely. For demo, let's say January 1, 1990.",
     "category": "personal"
-  },
-  {
-    "question": "How do I reset my password?",
-    "answer": "Go to Settings → Account → Reset Password.",
-    "category": "technical"
-  },
-  {
-    "question": "How can I deposit money?",
-    "answer": "You can deposit via Credit Card, PayPal or Bank Transfer.",
-    "category": "technical"
   }
 ]
