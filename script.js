@@ -1,3 +1,21 @@
+let faqData = []; // tu ćemo čuvati sva pitanja
+
+// funkcija koja učitava FAQ iz faq.json
+async function loadFAQ() {
+  try {
+    const response = await fetch('faq.json'); // uzima fajl iz repozitorijuma
+    faqData = await response.json();          // čuva podatke u varijablu
+  } catch (err) {
+    console.error('Failed to load FAQ', err);
+    faqData = [];
+  }
+}
+
+// kada se stranica učita, poziva se loadFAQ()
+window.onload = () => {
+  loadFAQ();
+};
+
 const chatWindow = document.getElementById('chatWindow');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
@@ -49,3 +67,4 @@ sendBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     chatWindow.innerHTML = '';
 });
+
