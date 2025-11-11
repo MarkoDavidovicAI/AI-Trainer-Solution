@@ -5,70 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Trainer Portfolio – AI Assistant Demo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Osnovni stilovi */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #000;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00d4e0;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #00d4e0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #00d4e0;
+            color: #000;
+        }
+
+        /* Chat sekcija */
+        .chat-container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00f0ff;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        #chatWindow {
+            background-color: #111;
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .chat-message {
+            margin: 5px 0;
+        }
+
+        .chat-message.user {
+            color: #00f0ff;
+        }
+
+        .chat-message.ai {
+            color: #ff8cff;
+        }
+
+        #userInput, #exampleDropdown {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+            width: calc(100% - 24px);
+        }
+
+        #typingIndicator {
+            margin-top: 5px;
+            color: #ff8cff;
+            font-style: italic;
+        }
+
+        /* Dropdown */
+        #exampleDropdown {
+            display: none;
+            background-color: #222;
+            color: #fff;
+            border-radius: 5px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        #exampleDropdown option {
+            padding: 5px;
+        }
+
+        footer {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- Navigacija -->
     <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#chat-demo">AI Demo</a></li>
-            <li><a href="#faq-examples">FAQ Examples</a></li>
-        </ul>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#chat">AI Chat Demo</a>
+        <a href="#faqExamples">FAQ Examples</a>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero">
         <h1>AI Trainer Portfolio – AI Assistant Demo</h1>
-        <p>This project showcases my expertise in training AI assistants to improve business efficiency across industries. 
-        The AI reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
-        <button onclick="document.getElementById('chat-demo').scrollIntoView({behavior:'smooth'})">Try AI Demo</button>
+        <p>This project showcases my expertise in training AI systems to improve business efficiency across industries. The AI assistant reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
+        <button onclick="document.getElementById('chat').scrollIntoView({behavior:'smooth'})">Try AI Chat</button>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About</h2>
-        <p>I help companies optimize their customer support and business processes by training AI assistants to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. 
-        By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
+        <h2>About This Project</h2>
+        <p>I help companies optimize their customer support and business processes by training AI assistants to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
         <p>This portfolio demonstrates how AI assistants can simulate realistic customer support scenarios.</p>
     </section>
 
-    <!-- AI Chat Demo Section -->
-    <section id="chat-demo">
+    <!-- AI Chat Demo -->
+    <section id="chat">
         <h2>AI Chat Demo</h2>
-        <p>You can type your question below or select one from the dropdown of example questions.</p>
         <div class="chat-container">
-            <div id="chatWindow" class="chat-window"></div>
-            <select id="exampleSelect">
-                <option value="">Select an example question...</option>
-            </select>
-            <input type="text" id="userInput" placeholder="Type your question here...">
+            <div id="chatWindow"></div>
+            <input type="text" id="userInput" placeholder="Type your question here..." autocomplete="off">
+            <select id="exampleDropdown" size="5"></select>
             <button id="sendBtn">Send</button>
             <button id="resetBtn">Reset Chat</button>
             <div id="typingIndicator" class="hidden">AI is typing...</div>
         </div>
+        <p>You can also type your own question in the input field above, or select from example questions in the dropdown.</p>
     </section>
 
-    <!-- FAQ Examples Section -->
-    <section id="faq-examples">
+    <!-- FAQ Examples -->
+    <section id="faqExamples">
         <h2>FAQ Examples</h2>
-        <p>Here are some example questions to try in the AI Assistant chat. You can type them exactly, or use similar variations:</p>
+        <p>Explore a few common examples with variations of key words (password, pass reset, forgot password, etc.). Each variation gives the same response to demonstrate AI training. This helps potential employers see how the system handles different phrasings.</p>
         <ul>
-            <li>password</li>
-            <li>pass reset</li>
-            <li>forgot password</li>
-            <li>how to change DOB</li>
-            <li>bonus not received</li>
-            <li>deposit issue</li>
+            <li>Password change / Forgot password / Reset password → “To reset your password, click Sign In → Existing User → Password Reset, enter your registered email, and click Send Password Reset Link. You will receive a link to create a new password.”</li>
+            <li>Date of birth change / DOB update → “Go to My Profile → Settings → Edit Information. Save changes before exiting.”</li>
+            <li>Deposit / Withdrawal / Bonus inquiry → “Please check your account balance and follow the instructions for deposit or withdrawal. For bonuses, see Promotions page.”</li>
         </ul>
-        <p>You don’t have to type exactly like this; the AI recognizes variations of these keywords. You can also type your own question in the input field above to test custom scenarios.</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Marko Davidović | AI Trainer Portfolio</p>
+        © 2025 Marko Davidović | AI Trainer Portfolio
     </footer>
 
+    <!-- Script -->
     <script src="script.js"></script>
+
 </body>
 </html>
