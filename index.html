@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Trainer Portfolio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trainer Portfolio – AI Assistant Demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#chat-demo">AI Demo</a></li>
+            <li><a href="#faq-examples">FAQ Examples</a></li>
+        </ul>
+    </nav>
 
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#chat">AI Demo</a></li>
-        <li><a href="#examples">FAQ Examples</a></li>
-    </ul>
-</nav>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>AI Trainer Portfolio – AI Assistant Demo</h1>
+        <p>This project showcases my expertise in training AI assistants to improve business efficiency across industries. 
+        The AI reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
+        <button onclick="document.getElementById('chat-demo').scrollIntoView({behavior:'smooth'})">Try AI Demo</button>
+    </section>
 
-<!-- Hero Section -->
-<section id="hero">
-    <h1>AI Trainer Portfolio – AI Assistant Demo</h1>
-    <p>This project showcases my expertise in training AI assistants to improve business efficiency across industries. The AI assistant reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
-    <button onclick="document.getElementById('chat').scrollIntoView({behavior:'smooth'})">Try AI Demo</button>
-</section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <p>I help companies optimize their customer support and business processes by training AI assistants to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. 
+        By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
+        <p>This portfolio demonstrates how AI assistants can simulate realistic customer support scenarios.</p>
+    </section>
 
-<!-- About Section -->
-<section id="about">
-    <h2>About This Project</h2>
-    <p>I help companies optimize their customer support and business processes by training AI assistants to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
-    <p>This portfolio demonstrates how AI assistants can simulate realistic customer support scenarios.</p>
-</section>
+    <!-- AI Chat Demo Section -->
+    <section id="chat-demo">
+        <h2>AI Chat Demo</h2>
+        <p>You can type your question below or select one from the dropdown of example questions.</p>
+        <div class="chat-container">
+            <div id="chatWindow" class="chat-window"></div>
+            <select id="exampleSelect">
+                <option value="">Select an example question...</option>
+            </select>
+            <input type="text" id="userInput" placeholder="Type your question here...">
+            <button id="sendBtn">Send</button>
+            <button id="resetBtn">Reset Chat</button>
+            <div id="typingIndicator" class="hidden">AI is typing...</div>
+        </div>
+    </section>
 
-<!-- Chat Section -->
-<section id="chat">
-    <h2>AI Demo</h2>
-    <div class="chat-container">
-        <div id="chatWindow" class="chat-window"></div>
-        <div id="typingIndicator" class="hidden">Typing...</div>
-        <input type="text" id="userInput" placeholder="Type your question here...">
-        <button id="sendBtn">Send</button>
-        <button id="resetBtn">Reset Chat</button>
-    </div>
-</section>
+    <!-- FAQ Examples Section -->
+    <section id="faq-examples">
+        <h2>FAQ Examples</h2>
+        <p>Here are some example questions to try in the AI Assistant chat. You can type them exactly, or use similar variations:</p>
+        <ul>
+            <li>password</li>
+            <li>pass reset</li>
+            <li>forgot password</li>
+            <li>how to change DOB</li>
+            <li>bonus not received</li>
+            <li>deposit issue</li>
+        </ul>
+        <p>You don’t have to type exactly like this; the AI recognizes variations of these keywords. You can also type your own question in the input field above to test custom scenarios.</p>
+    </section>
 
-<!-- FAQ Examples Section -->
-<section id="examples">
-    <h2>FAQ Examples</h2>
-    <p>
-        Explore how the AI Assistant handles common customer support questions. Click any example below to see a real-time response generated by the AI. 
-        You can also type your own question in the input field above to test custom scenarios.
-    </p>
-    <select id="exampleQuestions" onchange="selectExample()">
-        <option value="">-- Select an example question --</option>
-        <option value="How do I reset my password?">How do I res
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Marko Davidović | AI Trainer Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
