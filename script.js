@@ -25,7 +25,7 @@ function populateDropdown() {
         dropdown.appendChild(option);
     });
 
-    // kada korisnik klikne na input, dropdown se pojavi
+    // dropdown se prikazuje kada korisnik fokusira input
     input.addEventListener('focus', () => {
         dropdown.style.display = 'block';
     });
