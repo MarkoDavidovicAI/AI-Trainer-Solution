@@ -1,92 +1,17 @@
 [
   {
-    "category": "Account & Profile",
-    "question": "How do I create an account?",
-    "keywords": ["create account", "register", "sign up", "open account"],
-    "answer": "To create an account, click on 'Sign Up' at the top right corner, fill in the required information, and confirm your email."
+    "question": "How do I reset my password?",
+    "answer": "To reset your password, go to Sign In → Existing User → Forgot Password, enter your email, and click submit. You will receive a link to set a new password.",
+    "keywords": ["password", "pass", "reset"]
   },
   {
-    "category": "Account & Profile",
-    "question": "How do I change my personal information?",
-    "keywords": ["change info", "update profile", "edit personal data", "modify name", "change dob", "update address"],
-    "answer": "Go to 'My Profile' → 'Settings' → 'Edit Information'. Make sure to save your changes before exiting."
+    "question": "Forgot my password",
+    "answer": "To reset your password, go to Sign In → Existing User → Forgot Password, enter your email, and click submit. You will receive a link to set a new password.",
+    "keywords": ["password", "pass", "forgot"]
   },
   {
-    "category": "Account & Profile",
-    "question": "How can I delete my account?",
-    "keywords": ["delete account", "close account", "terminate account", "remove account"],
-    "answer": "To delete your account, contact our support team via live chat or email. Verification may be required."
-  },
-  {
-    "category": "Password & Login",
-    "question": "How can I reset my password?",
-    "keywords": ["forgot password", "change password", "reset pass", "password issue", "cannot login"],
-    "answer": "Click on 'Forgot Password?' on the login page, follow the instructions sent to your registered email, and create a new password."
-  },
-  {
-    "category": "Password & Login",
-    "question": "I can’t log in to my account",
-    "keywords": ["login issue", "sign in problem", "cannot login", "log in failed"],
-    "answer": "Please double-check your credentials. If the problem continues, reset your password or contact support."
-  },
-  {
-    "category": "Verification & Security",
-    "question": "How do I verify my identity?",
-    "keywords": ["verify account", "upload id", "identity check", "account verification"],
-    "answer": "You can verify your identity by uploading a valid ID and proof of address in the 'Verification' section of your profile."
-  },
-  {
-    "category": "Verification & Security",
-    "question": "Is my personal data safe?",
-    "keywords": ["data protection", "privacy", "security", "safe info"],
-    "answer": "Yes, all data is encrypted and protected according to GDPR and other privacy standards."
-  },
-  {
-    "category": "Deposits & Withdrawals",
-    "question": "How do I deposit funds?",
-    "keywords": ["deposit", "add money", "fund account", "top up"],
-    "answer": "Go to 'Cashier' → 'Deposit', select your preferred payment method, enter the amount, and confirm."
-  },
-  {
-    "category": "Deposits & Withdrawals",
-    "question": "How do I withdraw money?",
-    "keywords": ["withdraw", "cash out", "payout", "get money"],
-    "answer": "Navigate to 'Cashier' → 'Withdraw'. Choose your method and amount. Withdrawals are processed within 24–48 hours."
-  },
-  {
-    "category": "Deposits & Withdrawals",
-    "question": "Can I use cryptocurrency?",
-    "keywords": ["crypto", "bitcoin", "ethereum", "deposit crypto"],
-    "answer": "Yes, we support major cryptocurrencies like Bitcoin, Ethereum, and Litecoin for both deposits and withdrawals."
-  },
-  {
-    "category": "Bonuses & Promotions",
-    "question": "How can I claim my bonus?",
-    "keywords": ["claim bonus", "activate bonus", "use promo code", "get free spins"],
-    "answer": "Go to 'Promotions' → select your bonus → click 'Activate'. Some bonuses may require a promo code."
-  },
-  {
-    "category": "Bonuses & Promotions",
-    "question": "Why didn’t I receive my bonus?",
-    "keywords": ["bonus missing", "bonus not received", "no bonus", "promotion issue"],
-    "answer": "Ensure that you met the eligibility criteria and entered the correct code. If the issue persists, contact support."
-  },
-  {
-    "category": "Technical Issues",
-    "question": "The website isn’t loading properly.",
-    "keywords": ["site down", "website problem", "page not loading", "error loading"],
-    "answer": "Try clearing your browser cache or switching to another browser. If it continues, report it to our support team."
-  },
-  {
-    "category": "Technical Issues",
-    "question": "The app keeps crashing.",
-    "keywords": ["app crash", "app error", "mobile app issue", "app not working"],
-    "answer": "Please reinstall the app and ensure your device software is up to date. If the issue persists, contact technical support."
-  },
-  {
-    "category": "General Questions",
-    "question": "How can I contact customer support?",
-    "keywords": ["contact support", "get help", "talk to agent", "support email", "live chat"],
-    "answer": "You can reach our support team 24/7 via live chat or email at support@example.com."
+    "question": "Password change",
+    "answer": "To reset your password, go to Sign In → Existing User → Forgot Password, enter your email, and click submit. You will receive a link to set a new password.",
+    "keywords": ["password", "pass", "change"]
   }
 ]
