@@ -1,79 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trainer Portfolio – AI Assistant Demo</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ Chat</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <div class="logo">AI Portfolio</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#chat-demo">AI Chat Demo</a></li>
-                <li><a href="#faq-examples">FAQ Examples</a></li>
-            </ul>
-        </nav>
-    </header>
+<div id="chatWindow" class="chat-window"></div>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>AI Trainer Portfolio – AI Assistant Demo</h1>
-        <p>This project showcases my expertise in training AI assistants to improve business efficiency across industries. The AI assistant reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
-        <button onclick="document.getElementById('chat-demo').scrollIntoView({behavior:'smooth'})">Try Chat</button>
-    </section>
+<div class="input-area">
+    <input id="userInput" list="faqDropdown" placeholder="Type your question...">
+    <datalist id="faqDropdown"></datalist>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About This Project</h2>
-        <p>I help companies optimize their customer support and business processes by training AI assistants to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
-        <p>This portfolio demonstrates how AI assistants can simulate realistic customer support scenarios.</p>
-    </section>
+    <button id="sendBtn">Send</button>
+    <button id="resetBtn">Reset</button>
+</div>
 
-    <!-- AI Chat Demo Section -->
-    <section id="chat-demo">
-        <h2>AI Chat Demo</h2>
-        <p>Click the input below to see example questions or type your own to test the AI Assistant in real-time.</p>
+<div id="typingIndicator" class="typing hidden">Typing...</div>
 
-        <div class="dropdown-input">
-            <input type="text" id="userInput" placeholder="Type your question here..." autocomplete="off">
-            <ul id="dropdownList" class="dropdown-list hidden"></ul>
-        </div>
-
-        <button id="sendBtn">Send</button>
-        <button id="resetBtn">Reset Chat</button>
-
-        <div id="typingIndicator" class="hidden">AI is typing...</div>
-        <div id="chatWindow" class="chat-container"></div>
-    </section>
-
-    <!-- FAQ Examples Section -->
-    <section id="faq-examples">
-        <h2>FAQ Examples</h2>
-
-        <p>Explore AI Responses: This section shows how the AI Assistant understands different types of user questions. Browse the examples below to see how the system interprets intent and generates accurate support answers.</p>
-
-        <p>You can also type your own question in the input field above to test custom scenarios.</p>
-
-        <ul id="exampleQuestions">
-            <li>How do I reset my password?</li>
-            <li>I forgot my login details, what do I do?</li>
-            <li>How can I withdraw my funds?</li>
-            <li>How do I claim a bonus?</li>
-            <li>My payment didn’t go through — help.</li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Marko Davidović | AI Trainer Portfolio</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
