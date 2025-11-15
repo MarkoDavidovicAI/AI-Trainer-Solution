@@ -1,17 +1,480 @@
-[
-  {
-    "question": "How do I reset my password?",
-    "answer": "To reset your password, go to Sign In → Existing User → Forgot Password, enter your email, and click submit. You will receive a link to set a new password.",
-    "keywords": ["password", "pass", "reset"]
-  },
-  {
-    "question": "Forgot my password",
-    "answer": "To reset your password, go to Sign In → Existing User → Forgot Password, enter your email, and click submit. You will receive a link to set a new password.",
-    "keywords": ["password", "pass", "forgot"]
-  },
-  {
-    "question": "Password change",
-    "answer": "To reset your password, go to Sign In → Existing User → Forgot Password, enter your email, and click submit. You will receive a link to set a new password.",
-    "keywords": ["password", "pass", "change"]
-  }
-]
+{
+  "question": "How do I reset my password?",
+  "answer": "To reset your password, go to Sign In, select 'Existing User', click 'Forgot Password', enter your registered email, and follow the link sent to reset your password."
+}
+{
+  "question": "I forgot my password, what should I do?",
+  "answer": "To reset your password, go to Sign In, select 'Existing User', click 'Forgot Password', enter your registered email, and follow the link sent to reset your password."
+}
+{
+  "question": "Password reset instructions",
+  "answer": "To reset your password, go to Sign In, select 'Existing User', click 'Forgot Password', enter your registered email, and follow the link sent to reset your password."
+}
+{
+  "question": "Can't remember my password",
+  "answer": "To reset your password, go to Sign In, select 'Existing User', click 'Forgot Password', enter your registered email, and follow the link sent to reset your password."
+}
+{
+  "question": "How do I change my date of birth in profile?",
+  "answer": "To change your date of birth, go to 'My Profile' → 'Settings' → 'Edit Information'. Update your DOB and save the changes before exiting."
+}
+{
+  "question": "I want to update my birth date",
+  "answer": "To change your date of birth, go to 'My Profile' → 'Settings' → 'Edit Information'. Update your DOB and save the changes before exiting."
+}
+{
+  "question": "Change DOB instructions",
+  "answer": "To change your date of birth, go to 'My Profile' → 'Settings' → 'Edit Information'. Update your DOB and save the changes before exiting."
+}
+{
+  "question": "Edit my date of birth",
+  "answer": "To change your date of birth, go to 'My Profile' → 'Settings' → 'Edit Information'. Update your DOB and save the changes before exiting."
+}
+{
+  "question": "How can I deposit money?",
+  "answer": "To deposit funds, go to your Account → Deposit. Choose your preferred payment method, enter the amount, and follow the on-screen instructions. For cryptocurrency deposits, select the crypto wallet option and follow the provided steps."
+}
+{
+  "question": "Deposit instructions",
+  "answer": "To deposit funds, go to your Account → Deposit. Choose your preferred payment method, enter the amount, and follow the on-screen instructions. For cryptocurrency deposits, select the crypto wallet option and follow the provided steps."
+}
+{
+  "question": "Adding funds to my account",
+  "answer": "To deposit funds, go to your Account → Deposit. Choose your preferred payment method, enter the amount, and follow the on-screen instructions. For cryptocurrency deposits, select the crypto wallet option and follow the provided steps."
+}
+{
+  "question": "How to top-up account?",
+  "answer": "To deposit funds, go to your Account → Deposit. Choose your preferred payment method, enter the amount, and follow the on-screen instructions. For cryptocurrency deposits, select the crypto wallet option and follow the provided steps."
+}
+{
+  "question": "How do I withdraw funds?",
+  "answer": "To withdraw funds, go to your Account → Withdraw. Select the desired withdrawal method, enter the amount, and follow the instructions. Ensure that your account verification is complete to avoid delays."
+}
+{
+  "question": "Withdrawal instructions",
+  "answer": "To withdraw funds, go to your Account → Withdraw. Select the desired withdrawal method, enter the amount, and follow the instructions. Ensure that your account verification is complete to avoid delays."
+}
+{
+  "question": "Taking money out of my account",
+  "answer": "To withdraw funds, go to your Account → Withdraw. Select the desired withdrawal method, enter the amount, and follow the instructions. Ensure that your account verification is complete to avoid delays."
+}
+{
+  "question": "How to cash out?",
+  "answer": "To withdraw funds, go to your Account → Withdraw. Select the desired withdrawal method, enter the amount, and follow the instructions. Ensure that your account verification is complete to avoid delays."
+}
+{
+  "question": "How do I claim a bonus?",
+  "answer": "To claim a bonus, visit the Promotions page, ensure you meet eligibility criteria, and follow the on-screen instructions. For any issues, contact support through chat or support form."
+}
+{
+  "question": "Bonus claim instructions",
+  "answer": "To claim a bonus, visit the Promotions page, ensure you meet eligibility criteria, and follow the on-screen instructions. For any issues, contact support through chat or support form."
+}
+{
+  "question": "How to redeem bonus?",
+  "answer": "To claim a bonus, visit the Promotions page, ensure you meet eligibility criteria, and follow the on-screen instructions. For any issues, contact support through chat or support form."
+}
+{
+  "question": "Applying bonus to my account",
+  "answer": "To claim a bonus, visit the Promotions page, ensure you meet eligibility criteria, and follow the on-screen instructions. For any issues, contact support through chat or support form."
+}
+{
+  "question": "How do I update my profile information?",
+  "answer": "Go to 'My Profile' → 'Settings' → 'Edit Information'. Make the necessary changes and save before exiting."
+}
+{
+  "question": "Edit profile details",
+  "answer": "Go to 'My Profile' → 'Settings' → 'Edit Information'. Make the necessary changes and save before exiting."
+}
+{
+  "question": "Updating account information",
+  "answer": "Go to 'My Profile' → 'Settings' → 'Edit Information'. Make the necessary changes and save before exiting."
+}
+{
+  "question": "Change personal information",
+  "answer": "Go to 'My Profile' → 'Settings' → 'Edit Information'. Make the necessary changes and save before exiting."
+}
+{
+  "question": "How do I verify my account?",
+  "answer": "To verify your account, upload the required identification documents under 'Account Verification'. Follow the on-screen instructions and wait for confirmation."
+}
+{
+  "question": "Account verification process",
+  "answer": "To verify your account, upload the required identification documents under 'Account Verification'. Follow the on-screen instructions and wait for confirmation."
+}
+{
+  "question": "How to complete KYC?",
+  "answer": "To verify your account, upload the required identification documents under 'Account Verification'. Follow the on-screen instructions and wait for confirmation."
+}
+{
+  "question": "Verify my account identity",
+  "answer": "To verify your account, upload the required identification documents under 'Account Verification'. Follow the on-screen instructions and wait for confirmation."
+}
+{
+  "question": "How do I change my email address?",
+  "answer": "To update your email, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new email, and save changes."
+}
+{
+  "question": "Update my email",
+  "answer": "To update your email, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new email, and save changes."
+}
+{
+  "question": "Change account email",
+  "answer": "To update your email, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new email, and save changes."
+}
+{
+  "question": "Edit email address",
+  "answer": "To update your email, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new email, and save changes."
+}
+{
+  "question": "How do I change my phone number?",
+  "answer": "To update your phone number, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new number, and save changes."
+}
+{
+  "question": "Update my phone",
+  "answer": "To update your phone number, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new number, and save changes."
+}
+{
+  "question": "Change phone number",
+  "answer": "To update your phone number, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new number, and save changes."
+}
+{
+  "question": "Edit phone contact",
+  "answer": "To update your phone number, go to 'My Profile' → 'Settings' → 'Edit Information', enter the new number, and save changes."
+}
+{
+  "question": "How do I update payment methods?",
+  "answer": "Go to 'Account' → 'Payment Methods', select 'Add' or 'Edit', fill in the details, and save your changes."
+}
+{
+  "question": "Edit payment options",
+  "answer": "Go to 'Account' → 'Payment Methods', select 'Add' or 'Edit', fill in the details, and save your changes."
+}
+{
+  "question": "Change credit/debit card info",
+  "answer": "Go to 'Account' → 'Payment Methods', select 'Add' or 'Edit', fill in the details, and save your changes."
+}
+{
+  "question": "Update banking info",
+  "answer": "Go to 'Account' → 'Payment Methods', select 'Add' or 'Edit', fill in the details, and save your changes."
+}
+{
+  "question": "How can I view my transaction history?",
+  "answer": "To view transaction history, go to 'Account' → 'Transaction History' and select the desired period or filters."
+}
+{
+  "question": "Check past transactions",
+  "answer": "To view transaction history, go to 'Account' → 'Transaction History' and select the desired period or filters."
+}
+{
+  "question": "View account activity",
+  "answer": "To view transaction history, go to 'Account' → 'Transaction History' and select the desired period or filters."
+}
+{
+  "question": "Transaction log",
+  "answer": "To view transaction history, go to 'Account' → 'Transaction History' and select the desired period or filters."
+}
+{
+  "question": "How do I close my account?",
+  "answer": "To close your account, go to 'Account' → 'Settings' → 'Close Account', follow the instructions, and confirm your decision."
+}
+{
+  "question": "Delete my account",
+  "answer": "To close your account, go to 'Account' → 'Settings' → 'Close Account', follow the instructions, and confirm your decision."
+}
+{
+  "question": "Remove account",
+  "answer": "To close your account, go to 'Account' → 'Settings' → 'Close Account', follow the instructions, and confirm your decision."
+}
+{
+  "question": "Account closure steps",
+  "answer": "To close your account, go to 'Account' → 'Settings' → 'Close Account', follow the instructions, and confirm your decision."
+}
+{
+  "question": "How to contact support?",
+  "answer": "You can contact support via chat, email, or the support form on our website. Provide your issue details for a faster response."
+}
+{
+  "question": "Customer support contact",
+  "answer": "You can contact support via chat, email, or the support form on our website. Provide your issue details for a faster response."
+}
+{
+  "question": "Helpdesk information",
+  "answer": "You can contact support via chat, email, or the support form on our website. Provide your issue details for a faster response."
+}
+{
+  "question": "Reach support team",
+  "answer": "You can contact support via chat, email, or the support form on our website. Provide your issue details for a faster response."
+}
+{
+  "question": "How to report a problem?",
+  "answer": "Go to 'Support' → 'Report an Issue', fill in the required information, and submit. Our team will respond promptly."
+}
+{
+  "question": "Report issue",
+  "answer": "Go to 'Support' → 'Report an Issue', fill in the required information, and submit. Our team will respond promptly."
+}
+{
+  "question": "Submit problem ticket",
+  "answer": "Go to 'Support' → 'Report an Issue', fill in the required information, and submit. Our team will respond promptly."
+}
+{
+  "question": "File a support request",
+  "answer": "Go to 'Support' → 'Report an Issue', fill in the required information, and submit. Our team will respond promptly."
+}
+{
+  "question": "How do I reset my password?",
+  "answer": "To reset your password, click 'Sign In' → 'Forgot Password', enter your registered email, and follow the instructions in the reset email."
+}
+{
+  "question": "Forgot my password",
+  "answer": "To reset your password, click 'Sign In' → 'Forgot Password', enter your registered email, and follow the instructions in the reset email."
+}
+{
+  "question": "Password reset",
+  "answer": "To reset your password, click 'Sign In' → 'Forgot Password', enter your registered email, and follow the instructions in the reset email."
+}
+{
+  "question": "Change password",
+  "answer": "To reset your password, click 'Sign In' → 'Forgot Password', enter your registered email, and follow the instructions in the reset email."
+}
+{
+  "question": "How do I enable two-factor authentication?",
+  "answer": "Go to 'Account' → 'Security' → 'Two-Factor Authentication', follow the instructions to link your phone or authenticator app, and enable it."
+}
+{
+  "question": "Enable 2FA",
+  "answer": "Go to 'Account' → 'Security' → 'Two-Factor Authentication', follow the instructions to link your phone or authenticator app, and enable it."
+}
+{
+  "question": "Set up two-factor auth",
+  "answer": "Go to 'Account' → 'Security' → 'Two-Factor Authentication', follow the instructions to link your phone or authenticator app, and enable it."
+}
+{
+  "question": "Activate 2FA",
+  "answer": "Go to 'Account' → 'Security' → 'Two-Factor Authentication', follow the instructions to link your phone or authenticator app, and enable it."
+}
+{
+  "question": "How to check account balance?",
+  "answer": "Navigate to 'Account' → 'Balance' to view your current funds, including deposits, withdrawals, and bonuses."
+}
+{
+  "question": "View balance",
+  "answer": "Navigate to 'Account' → 'Balance' to view your current funds, including deposits, withdrawals, and bonuses."
+}
+{
+  "question": "Check my funds",
+  "answer": "Navigate to 'Account' → 'Balance' to view your current funds, including deposits, withdrawals, and bonuses."
+}
+{
+  "question": "Account summary",
+  "answer": "Navigate to 'Account' → 'Balance' to view your current funds, including deposits, withdrawals, and bonuses."
+}
+{
+  "question": "How do I deposit money?",
+  "answer": "Go to 'Account' → 'Deposit', select your payment method, enter the amount, and follow the on-screen instructions to complete the transaction."
+}
+{
+  "question": "Make a deposit",
+  "answer": "Go to 'Account' → 'Deposit', select your payment method, enter the amount, and follow the on-screen instructions to complete the transaction."
+}
+{
+  "question": "Add funds",
+  "answer": "Go to 'Account' → 'Deposit', select your payment method, enter the amount, and follow the on-screen instructions to complete the transaction."
+}
+{
+  "question": "Deposit money into account",
+  "answer": "Go to 'Account' → 'Deposit', select your payment method, enter the amount, and follow the on-screen instructions to complete the transaction."
+}
+{
+  "question": "How do I withdraw funds?",
+  "answer": "Go to 'Account' → 'Withdrawal', select the method, enter the amount, and follow instructions. Confirm the transaction to complete it."
+}
+{
+  "question": "Withdraw money",
+  "answer": "Go to 'Account' → 'Withdrawal', select the method, enter the amount, and follow instructions. Confirm the transaction to complete it."
+}
+{
+  "question": "Request payout",
+  "answer": "Go to 'Account' → 'Withdrawal', select the method, enter the amount, and follow instructions. Confirm the transaction to complete it."
+}
+{
+  "question": "Transfer funds out",
+  "answer": "Go to 'Account' → 'Withdrawal', select the method, enter the amount, and follow instructions. Confirm the transaction to complete it."
+}
+{
+  "question": "How to claim a bonus?",
+  "answer": "Visit the 'Promotions' page, select an available bonus, meet the eligibility requirements, and follow on-screen instructions to activate it."
+}
+{
+  "question": "Redeem bonus",
+  "answer": "Visit the 'Promotions' page, select an available bonus, meet the eligibility requirements, and follow on-screen instructions to activate it."
+}
+{
+  "question": "Activate promotion",
+  "answer": "Visit the 'Promotions' page, select an available bonus, meet the eligibility requirements, and follow on-screen instructions to activate it."
+}
+{
+  "question": "Claim rewards",
+  "answer": "Visit the 'Promotions' page, select an available bonus, meet the eligibility requirements, and follow on-screen instructions to activate it."
+}
+{
+  "question": "How do I update my profile picture?",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Upload Photo', choose an image, and save changes."
+}
+{
+  "question": "Change profile picture",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Upload Photo', choose an image, and save changes."
+}
+{
+  "question": "Update avatar",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Upload Photo', choose an image, and save changes."
+}
+{
+  "question": "Edit my profile picture",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Upload Photo', choose an image, and save changes."
+}
+{
+  "question": "How do I subscribe to notifications?",
+  "answer": "Go to 'Settings' → 'Notifications', enable the desired notification types, and save changes."
+}
+{
+  "question": "Turn on notifications",
+  "answer": "Go to 'Settings' → 'Notifications', enable the desired notification types, and save changes."
+}
+{
+  "question": "Enable alerts",
+  "answer": "Go to 'Settings' → 'Notifications', enable the desired notification types, and save changes."
+}
+{
+  "question": "Manage notification preferences",
+  "answer": "Go to 'Settings' → 'Notifications', enable the desired notification types, and save changes."
+}
+{
+  "question": "How to contact support?",
+  "answer": "You can reach our support team via the chat window, support form, or email. Our team will respond promptly to assist you."
+}
+{
+  "question": "Support contact",
+  "answer": "You can reach our support team via the chat window, support form, or email. Our team will respond promptly to assist you."
+}
+{
+  "question": "Customer service",
+  "answer": "You can reach our support team via the chat window, support form, or email. Our team will respond promptly to assist you."
+}
+{
+  "question": "Get help",
+  "answer": "You can reach our support team via the chat window, support form, or email. Our team will respond promptly to assist you."
+}
+{
+  "question": "How do I change my email address?",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Email', enter your new email address, and save changes. Verify your new email via the confirmation link."
+}
+{
+  "question": "Update email",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Email', enter your new email address, and save changes. Verify your new email via the confirmation link."
+}
+{
+  "question": "Modify email address",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Email', enter your new email address, and save changes. Verify your new email via the confirmation link."
+}
+{
+  "question": "Change my email",
+  "answer": "Go to 'Profile' → 'Edit Profile' → 'Email', enter your new email address, and save changes. Verify your new email via the confirmation link."
+}
+{
+  "question": "How do I enable notifications for promotions?",
+  "answer": "Go to 'Settings' → 'Notifications' → 'Promotions', toggle on the notifications you want, and save changes."
+}
+{
+  "question": "Enable promo notifications",
+  "answer": "Go to 'Settings' → 'Notifications' → 'Promotions', toggle on the notifications you want, and save changes."
+}
+{
+  "question": "Activate promotion alerts",
+  "answer": "Go to 'Settings' → 'Notifications' → 'Promotions', toggle on the notifications you want, and save changes."
+}
+{
+  "question": "Turn on promotions notifications",
+  "answer": "Go to 'Settings' → 'Notifications' → 'Promotions', toggle on the notifications you want, and save changes."
+}
+{
+  "question": "How do I verify my account?",
+  "answer": "Go to 'Account' → 'Verification', upload the required documents, and follow the on-screen instructions to complete verification."
+}
+{
+  "question": "Account verification",
+  "answer": "Go to 'Account' → 'Verification', upload the required documents, and follow the on-screen instructions to complete verification."
+}
+{
+  "question": "Verify identity",
+  "answer": "Go to 'Account' → 'Verification', upload the required documents, and follow the on-screen instructions to complete verification."
+}
+{
+  "question": "Complete KYC",
+  "answer": "Go to 'Account' → 'Verification', upload the required documents, and follow the on-screen instructions to complete verification."
+}
+{
+  "question": "How do I cancel a transaction?",
+  "answer": "Navigate to 'Account' → 'Transaction History', select the transaction, and click 'Cancel' if it is still pending."
+}
+{
+  "question": "Cancel my transaction",
+  "answer": "Navigate to 'Account' → 'Transaction History', select the transaction, and click 'Cancel' if it is still pending."
+}
+{
+  "question": "Abort transaction",
+  "answer": "Navigate to 'Account' → 'Transaction History', select the transaction, and click 'Cancel' if it is still pending."
+}
+{
+  "question": "Stop a payment",
+  "answer": "Navigate to 'Account' → 'Transaction History', select the transaction, and click 'Cancel' if it is still pending."
+}
+{
+  "question": "How do I view my transaction history?",
+  "answer": "Go to 'Account' → 'Transaction History' to see a complete list of your deposits, withdrawals, and bonuses."
+}
+{
+  "question": "Transaction log",
+  "answer": "Go to 'Account' → 'Transaction History' to see a complete list of your deposits, withdrawals, and bonuses."
+}
+{
+  "question": "Account activity",
+  "answer": "Go to 'Account' → 'Transaction History' to see a complete list of your deposits, withdrawals, and bonuses."
+}
+{
+  "question": "View past transactions",
+  "answer": "Go to 'Account' → 'Transaction History' to see a complete list of your deposits, withdrawals, and bonuses."
+}
+{
+  "question": "How do I enable dark mode?",
+  "answer": "Go to 'Settings' → 'Display', toggle 'Dark Mode' on, and changes will apply immediately."
+}
+{
+  "question": "Activate dark mode",
+  "answer": "Go to 'Settings' → 'Display', toggle 'Dark Mode' on, and changes will apply immediately."
+}
+{
+  "question": "Turn on night mode",
+  "answer": "Go to 'Settings' → 'Display', toggle 'Dark Mode' on, and changes will apply immediately."
+}
+{
+  "question": "Enable dark theme",
+  "answer": "Go to 'Settings' → 'Display', toggle 'Dark Mode' on, and changes will apply immediately."
+}
+{
+  "question": "How do I close my account?",
+  "answer": "Go to 'Account' → 'Close Account', follow the on-screen instructions, and confirm the closure. Contact support if you face any issues."
+}
+{
+  "question": "Delete account",
+  "answer": "Go to 'Account' → 'Close Account', follow the on-screen instructions, and confirm the closure. Contact support if you face any issues."
+}
+{
+  "question": "Deactivate account",
+  "answer": "Go to 'Account' → 'Close Account', follow the on-screen instructions, and confirm the closure. Contact support if you face any issues."
+}
+{
+  "question": "Terminate account",
+  "answer": "Go to 'Account' → 'Close Account', follow the on-screen instructions, and confirm the closure. Contact support if you face any issues."
+}
