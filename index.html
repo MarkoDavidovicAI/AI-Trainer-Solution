@@ -2,69 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>AI Chat Demo – Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trainer Portfolio – AI Assistant Demo</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            background: #222;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* PAGE WRAPPER */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        /* CHAT BLOCK */
+        #chatWindow {
+            width: 100%;
+            height: 300px;
+            background: #eee;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+
+        .chat-message {
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+
+        .chat-message.user {
+            background: #d1e7ff;
+            text-align: right;
+        }
+
+        .chat-message.ai {
+            background: #e7ffe7;
+        }
+
+        /* CHAT INPUT */
+        #userInput {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        /* DROPDOWN (AUTOCOMPLETE) */
+        #suggestions {
+            display: none;
+            border: 1px solid #ccc;
+            background: #fff;
+            position: absolute;
+            width: calc(100% - 2px);
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 10;
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background: #e8e8e8;
+        }
+
+        /* BUTTONS */
+        #sendBtn, #resetBtn {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        /* FAQ block below */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-section ul {
+            padding-left: 18px;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Navigation -->
+
+    <!-- TOP NAVIGATION -->
     <nav>
-        <ul class="nav-links" style="justify-content: flex-end;">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#chat-demo">AI Chat Demo</a></li>
-            <li><a href="#faq-examples">FAQ Examples</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">AI Chat Demo</a>
+        <a href="#">FAQ Example</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
+    <div class="container">
+
         <h1>AI Trainer Portfolio – AI Assistant Demo</h1>
         <p>This project showcases my expertise in training AI assistants to improve business efficiency across industries. The AI assistant reduces the need for extra support agents, speeds up response times, increases client satisfaction, and shortens issue resolution cycles.</p>
-        <button onclick="document.getElementById('chat-demo').scrollIntoView({behavior:'smooth'})">Try Chat</button>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About This Project</h2>
-        <p>I help companies optimize their customer support and business processes by training AI assistants to handle repetitive tasks, provide fast and accurate responses, and improve overall client satisfaction. By implementing AI solutions, businesses save time, reduce costs, and increase operational efficiency.</p>
-        <p>This portfolio demonstrates how AI assistants can simulate realistic customer support scenarios.</p>
-    </section>
-
-    <!-- AI Chat Demo Section -->
-    <section id="chat-demo">
-        <h2>AI Chat Demo</h2>
+        <h2>Try Chat</h2>
         <p>Click on the input below to see example questions or type your own question to test the AI Assistant in real-time.</p>
 
-        <div class="dropdown-input">
-            <input type="text" id="userInput" placeholder="Type your question here..." autocomplete="off">
-            <select id="faqDropdown">
-                <!-- 100 FAQ questions will be populated by script.js -->
-            </select>
+        <!-- CHAT WINDOW -->
+        <div id="chatWindow"></div>
+
+        <!-- INPUT + DROPDOWN -->
+        <div style="position: relative;">
+            <input id="userInput" type="text" placeholder="Type your question..." autocomplete="off">
+            <div id="suggestions"></div>
         </div>
 
+        <!-- BUTTONS -->
         <button id="sendBtn">Send</button>
-        <button id="resetBtn">Reset Chat</button>
-        <div id="typingIndicator" class="hidden">AI is typing...</div>
-        <div id="chatWindow" class="chat-container"></div>
-    </section>
+        <button id="resetBtn">Reset</button>
 
-    <!-- FAQ Examples Section -->
-    <section id="faq-examples">
-        <h2>FAQ Examples</h2>
-        <p>Explore AI Responses: This section allows you to see how the AI Assistant responds to example customer support questions. These examples show different ways users might phrase questions and how the AI can handle them in real-time.</p>
-        <ul id="exampleQuestions">
-            <li>Password reset / pass change / forgot password → Reset your password via the Sign In page, choose "Existing User", click "Password Reset", enter your registered email, and follow the instructions to receive a reset link.</li>
-            <li>Deposit / Withdrawal / Bonus inquiry → Check your account balance, follow on-screen instructions for deposits or withdrawals. For bonuses, see Promotions page and follow eligibility and activation steps. Contact support if needed.</li>
-            <li>Change date of birth → Go to "My Profile" → "Settings" → "Edit Information", update your DOB, and save changes.</li>
-        </ul>
-    </section>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>FAQ Examples</h2>
+            <p>Explore AI Responses: This section allows you to see how the AI Assistant responds to example customer support questions.</p>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Marko Davidović | AI Trainer Portfolio</p>
-    </footer>
+            <ul>
+                <li><strong>Password reset:</strong> Reset your password via the Sign In page…</li>
+                <li><strong>Deposit / Withdrawal:</strong> Check your account balance…</li>
+                <li><strong>Change date of birth:</strong> Update your DOB under My Profile…</li>
+            </ul>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
