@@ -1,116 +1,129 @@
-// script.js
+let faqData = []; // Držimo sva pitanja i odgovore
 
-let faqData = []; // ovde čuvamo sva pitanja
-
-// učitavanje FAQ iz json fajla
+// Učitaj faq.json
 async function loadFAQ() {
     try {
-        const response = await fetch('faq.json');
-        faqData = await response.json();
-        populateDropdown();
+        const res = await fetch("faq.json");
+        faqData = await res.json();
     } catch (err) {
-        console.error('Failed to load FAQ', err);
+        console.error("Failed to load faq.json", err);
         faqData = [];
     }
 }
 
-// popunjavanje dropdown liste
-function populateDropdown() {
-    const input = document.getElementById('userInput');
-    const dropdown = document.getElementById('faqDropdown');
-
-    faqData.forEach(faq => {
-        const option = document.createElement('option');
-        option.value = faq.question;
-        dropdown.appendChild(option);
-    });
-
-    // pokaži dropdown kada korisnik klikne ili kuca
-    input.addEventListener('focus', () => {
-        dropdown.style.display = 'block';
-    });
-
-    input.addEventListener('input', () => {
-        dropdown.style.display = 'block';
-    });
-
-    // kada izabere iz dropdown
-    dropdown.addEventListener('change', () => {
-        input.value = dropdown.value;
-        sendMessage();
-        dropdown.style.display = 'none';
-    });
-
-    // sakrij dropdown ako klikne van
-    document.addEventListener('click', (e) => {
-        if (e.target !== input && e.target !== dropdown) {
-            dropdown.style.display = 'none';
-        }
-    });
+// Prikaz poruke
+function appendMessage(text, sender) {
+    const chat = document.getElementById("chatWindow");
+    const div = document.createElement("div");
+    div.className = "chat-message " + sender;
+    div.textContent = text;
+    chat.appendChild(div);
+    chat.scrollTop = chat.scrollHeight;
 }
 
-// pronalazi odgovor na osnovu ključnih reči
-function getAnswer(userInput) {
-    const input = userInput.toLowerCase();
-
-    // tražimo pitanje koje sadrži neku ključnu reč
-    const match = faqData.find(faq => {
-        return faq.keywords.some(keyword => input.includes(keyword.toLowerCase()));
-    });
-
-    if (match) {
-        return match.answer;
-    } else {
-        return "We'll connect you to a live agent in the shortest possible time for further assistance.";
-    }
+// Reset chat
+function resetChat() {
+    document.getElementById("chatWindow").innerHTML = "";
 }
 
-// prikaz poruke u chat prozoru
-function appendMessage(message, sender) {
-    const chatWindow = document.getElementById('chatWindow');
-    const div = document.createElement('div');
-    div.textContent = message;
-    div.classList.add('chat-message', sender);
-    chatWindow.appendChild(div);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+// Pomoćna: vrati listu sugestija iz faq.json
+function getSuggestions(input) {
+    if (!input) return [];
+
+    input = input.toLowerCase();
+
+    return faqData
+        .filter(item =>
+            item.question.toLowerCase().includes(input) ||
+            item.keywords.some(k => k.toLowerCase().includes(input))
+        )
+        .slice(0, 20); // maksimalno 20 sugestija
 }
 
-// slanje poruke
+// Pronađi odgovor
+function getAnswer(input) {
+    input = input.toLowerCase();
+
+    const match = faqData.find(item =>
+        item.question.toLowerCase().includes(input) ||
+        item.keywords.some(k => input.includes(k.toLowerCase()))
+    );
+
+    if (match) return match.answer;
+
+    return "I couldn't find the information you're looking for. I will forward your request to a live support agent who will assist you shortly.";
+}
+
+// Slanje poruke
 function sendMessage() {
-    const input = document.getElementById('userInput');
-    const typingIndicator = document.getElementById('typingIndicator');
+    const input = document.getElementById("userInput");
     const question = input.value.trim();
     if (!question) return;
 
-    appendMessage(question, 'user');
-    input.value = '';
-
-    typingIndicator.classList.remove('hidden');
+    appendMessage(question, "user");
+    input.value = "";
+    hideSuggestions();
 
     setTimeout(() => {
         const answer = getAnswer(question);
-        appendMessage(answer, 'ai');
-        typingIndicator.classList.add('hidden');
-    }, 800);
+        appendMessage(answer, "ai");
+    }, 500);
 }
 
-// reset chat
-function resetChat() {
-    const chatWindow = document.getElementById('chatWindow');
-    chatWindow.innerHTML = '';
-}
+// Sugestije (dropdown)
+function showSuggestions(list) {
+    const box = document.getElementById("suggestions");
+    box.innerHTML = "";
 
-// inicijalizacija
-window.onload = () => {
-    loadFAQ();
+    if (list.length === 0) {
+        box.style.display = "none";
+        return;
+    }
 
-    document.getElementById('sendBtn').addEventListener('click', sendMessage);
-    document.getElementById('resetBtn').addEventListener('click', resetChat);
+    list.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "suggestion-item";
+        div.textContent = item.question;
 
-    const input = document.getElementById('userInput');
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
+        div.onclick = () => {
+            document.getElementById("userInput").value = item.question;
+            hideSuggestions();
             sendMessage();
-        }
+        };
+
+        box.appendChild(div);
+    });
+
+    box.style.display = "block";
+}
+
+function hideSuggestions() {
+    document.getElementById("suggestions").style.display = "none";
+}
+
+// Inicijalizacija nakon učitavanja stranice
+window.onload = async () => {
+    await loadFAQ();
+
+    document.getElementById("sendBtn").addEventListener("click", sendMessage);
+    document.getElementById("resetBtn").addEventListener("click", resetChat);
+
+    const input = document.getElementById("userInput");
+
+    // ENTER
+    input.addEventListener("keypress", e => {
+        if (e.key === "Enter") sendMessage();
+    });
+
+    // Autocomplete
+    input.addEventListener("input", () => {
+        const text = input.value.trim();
+        const list = getSuggestions(text);
+        showSuggestions(list);
+    });
+
+    // Klik izvan dropdowna
+    document.addEventListener("click", (e) => {
+        if (e.target.id !== "userInput") hideSuggestions();
     });
 };
